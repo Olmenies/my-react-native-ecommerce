@@ -11,8 +11,8 @@ import {styles} from './styles';
 //
 const Header = () => {
     return(
-        <View>
-            <Text>I'm header</Text>
+        <View style={styles.headerContainer}>
+            <Text style={styles.headerText}>I'm header</Text>
         </View>
     );
 }

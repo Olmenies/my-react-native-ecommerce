@@ -11,7 +11,7 @@ import {styles} from './styles';
 //
 const ProductListScreen = () => {
     return(
-        <View>
+        <View style={styles.foo}>
             <Text>Soy ProductListScreen</Text>
         </View>
     );

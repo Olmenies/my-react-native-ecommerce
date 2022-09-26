@@ -4,7 +4,7 @@ import React from 'react';
 import {View, Text} from 'react-native';
 //Custom components
 //Styles
-import {styles} from 'styles';
+import {styles} from './styles';
 
 //
 //Component start
