@@ -1,16 +1,20 @@
 //React Native components
 import {StyleSheet} from 'react-native';
 //Colors constants
-import colors from '../../constants/colors'
+import COLORS from '../../constants/colors'
 
 //
 //Component start
 //
 export const styles = StyleSheet.create({
     itemContainer:{
-        backgroundColor:'tomato',
         flexDirection:'row',
-        justifyContent:'center',
+        justifyContent:'space-between',
+        alignItems:'center',
+        backgroundColor:COLORS.secondary,
         margin:10,
+        padding:10,
+        elevation:3,
+        borderRadius:7,
     }
 });

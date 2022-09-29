@@ -1,6 +1,9 @@
 //React Native components
-import { Text, View, StatusBar } from 'react-native';
-import {Header, ProductsListScreen} from './index';
+import {Text, View, StatusBar } from 'react-native';
+//Custom components
+import {Header} from './components/index';
+//Custom screeens
+import {ProductsListScreen} from './screens/index';
 
 //styles
 import {styles} from './styles';
