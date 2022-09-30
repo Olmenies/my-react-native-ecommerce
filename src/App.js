@@ -15,7 +15,7 @@ export default function App() {
     return (
         <View style={styles.container}>
             <StatusBar style="auto" />
-            <Header/>
+            <Header headerText='Soy el header'/>
             <ProductsListScreen/>
         </View>
     );

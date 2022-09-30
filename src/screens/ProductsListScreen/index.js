@@ -4,7 +4,7 @@ import {useState, useEffect} from 'react';
 //React Native components
 import {View, Text, FlatList, TouchableOpacity, Modal, Button, TextInput} from 'react-native';
 //Custom components
-import {CustomModal} from '../../components/index';
+import {CustomModal, Item, CustomInput} from '../../components/index';
 //Styles
 import {styles} from './styles';
 
@@ -47,36 +47,16 @@ const ProductListScreen = () => {
         setItem('');
     }
 
-    useEffect(() => {
-        console.log(myArray);
-    },[myArray]);
-
     const renderItem = ({item}) => {
         return (
-            <View style={styles.itemContainer}>
-                <Text>{item.title}</Text>
-
-                <TouchableOpacity style={{backgroundColor:'#03bb85', padding:3, borderRadius:7}} onPress={() => null}>
-                    <Text>Comprar</Text>
-                </TouchableOpacity>
-
-                <TouchableOpacity style={{backgroundColor:'red', padding:3, borderRadius:7}} onPress={() => handleOnDelete(item)}>
-                    <Text>X</Text>
-                </TouchableOpacity>
-            </View>
+            <Item item={item} handleOnDelete={handleOnDelete}/>
         );
     };
 
     return(
         <View>
-
             <View>
-                <TextInput
-                    placeholder='Add item'
-                    value={item}
-                    onChangeText={onChangeText}
-                />
-                <TouchableOpacity onPress={() => handleOnAdd()}><Text>Add</Text></TouchableOpacity>
+                <CustomInput item={item} onChangeText={onChangeText} handleOnAdd={handleOnAdd}/>
             </View>
             <View>
                 <FlatList

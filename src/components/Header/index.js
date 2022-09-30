@@ -9,10 +9,10 @@ import {styles} from './styles';
 //
 //Component start
 //
-const Header = () => {
+const Header = ({headerText}) => {
     return(
         <View style={styles.headerContainer}>
-            <Text style={styles.headerText}>I'm header</Text>
+            <Text style={styles.headerText}>{headerText}</Text>
         </View>
     );
 }
