@@ -1,4 +1,4 @@
-//React.JS
+//React components
 import React from 'react';
 //React Native coponents
 import {View, Text} from 'react-native';

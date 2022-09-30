@@ -4,6 +4,8 @@ import {Text, View, StatusBar } from 'react-native';
 import {Header} from './components/index';
 //Custom screeens
 import {ProductsListScreen} from './screens/index';
+//Custom React Navigation components
+import AppNavigator from './navigation/index';
 
 //styles
 import {styles} from './styles';
@@ -12,6 +14,7 @@ import {styles} from './styles';
 //Component start
 //
 export default function App() {
+    /*
     return (
         <View style={styles.container}>
             <StatusBar style="auto" />
@@ -19,4 +22,8 @@ export default function App() {
             <ProductsListScreen/>
         </View>
     );
+    */
+    return(
+        <AppNavigator/>
+    )
 }
