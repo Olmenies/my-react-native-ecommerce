@@ -14,15 +14,7 @@ import {styles} from './styles';
 //Component start
 //
 export default function App() {
-    /*
-    return (
-        <View style={styles.container}>
-            <StatusBar style="auto" />
-            <Header headerText='Soy el header'/>
-            <ProductsListScreen/>
-        </View>
-    );
-    */
+
     return(
         <AppNavigator/>
     )

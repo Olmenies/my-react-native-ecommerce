@@ -15,7 +15,6 @@ const AppNavigator = () => {
             <ShopNavigator/>
         </NavigationContainer>
     );
-
 }
 
 export default AppNavigator;
