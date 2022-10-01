@@ -17,7 +17,7 @@ const ShopNavigator = () => {
             initialRouteName='Categories'
             screenOptions={{
                 headerStyle:{
-                    backgroundColor: Platform.OS === 'ios' ? 'tomato' : 'cyan'
+                    backgroundColor: Platform.OS === 'ios' ? 'tomato' : 'brown'
                 },
                 headerTintColor: Platform.OS === 'ios' ? 'black' : 'white'
             }}>

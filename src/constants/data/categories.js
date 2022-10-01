@@ -21,7 +21,7 @@ export const CATEGORIES = [
     },
     {
         id:5,
-        title:'Harinas de arroz',
+        name:'Harinas de arroz',
         color:'#896978',
     },
 ];

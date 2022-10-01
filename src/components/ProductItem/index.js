@@ -8,18 +8,17 @@ import {styles} from './styles';
 const ProductItem = ({item, onSelected}) => {
 
     return(
-        <View style={styles.itemContainer}>
-            <TouchableOpacity
-                onPress={() => onSelected(item)}>
-                <View>
-                    <Text>{item.name}</Text>
-                </View>
-                <View>
-                    <Text>{item.price}</Text>
-                    <Text>{item.weight}</Text>
-                </View>
-            </TouchableOpacity>
-        </View>
+        <TouchableOpacity
+            style={styles.itemContainer}
+            onPress={() => onSelected(item)}>
+            <View>
+                <Text>{item.name}</Text>
+            </View>
+            <View>
+                <Text>${item.price}</Text>
+                <Text>{item.weight}</Text>
+            </View>
+        </TouchableOpacity>
     );
 }
 

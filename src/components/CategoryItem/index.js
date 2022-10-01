@@ -10,13 +10,13 @@ import {styles} from './styles';
 //
 const CategoryItem = ({item, onSelected}) => {
     return(
-        <View>
-            <TouchableOpacity onPress={() => onSelected(item)}>
-                <View>
-                    <Text>{item.name}</Text>
-                </View>
-            </TouchableOpacity>
-        </View>
+        <TouchableOpacity
+            style={styles.itemContainer}
+            onPress={() => onSelected(item)}>
+            <View>
+                <Text style={styles.itemText}>{item.name}</Text>
+            </View>
+        </TouchableOpacity>
     );
 }
 
