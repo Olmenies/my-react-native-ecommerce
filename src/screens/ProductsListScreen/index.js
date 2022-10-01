@@ -1,20 +1,51 @@
 //React components
 import React from 'react';
+import {useState, useEffect} from 'react';
 //React Native components
-import {View, Text} from 'react-native';
+import {View, FlatList} from 'react-native';
 //Custom components
-import {CustomButton} from '../../components/index';
+import {ProductItem} from '../../components/index';
 //Styles
 import {styles} from './styles';
+//Mock data
+import {PRODUCTS} from '../../constants/data/products';
+
 
 //
 //Component start
 //
-const ProductsListScreen = ({navigation}) => {
+const ProductsListScreen = ({navigation, route}) => {
+
+    const [filteredProducts, setFilteredProducts] = useState([]);
+
+    const filterProducts = () => {
+        const tempFilteredProducts = PRODUCTS.filter(el => el.category === route.params.categoryID);
+
+        setFilteredProducts(tempFilteredProducts);
+    }
+
+    useEffect(() => {
+        filterProducts();
+    },[]);
+
+    const renderItem = ({item}) => {
+        return(
+            <ProductItem
+                item={item}
+                onSelected={() => null}
+            />
+        );
+    }
+
+    const keyExtractor = (item) => item.id.toString();
+
     return(
         <View>
-            <Text>Soy ProductsListScreen</Text>
-            <CustomButton customButtonText='Go to product detail' customButtonOnPress={() => navigation.navigate('ProductDetail')}/>
+            <FlatList
+                data={filteredProducts}
+                renderItem={renderItem}
+                keyExtractor={keyExtractor}
+            />
         </View>
     );
 }

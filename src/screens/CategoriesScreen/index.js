@@ -15,7 +15,6 @@ import {CATEGORIES} from '../../constants/data/categories';
 const CategoriesScreen = ({navigation}) => {
 
     const renderItem = ({item}) => {
-        console.log(item);
         return(
             <CategoryItem item={item}
                 onSelected={() => navigation.navigate('ProductsList',{

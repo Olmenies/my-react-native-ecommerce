@@ -9,7 +9,7 @@ export const PRODUCTS = [
     },
     {
         id:2,
-        category:,
+        category:1,
         name:'Pan ciabatta blanco',
         description:'Pan de alta hidratación, miga alveolada y corteza crujiente',
         weight:'800gr',
