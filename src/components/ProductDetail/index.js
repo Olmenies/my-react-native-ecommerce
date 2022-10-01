@@ -3,6 +3,9 @@ import React from 'react';
 //React Native components
 import {View, Text, TouchableOpacity} from 'react-native';
 
+//
+//Component start
+//
 const ProductDetail = ({item, onSelected}) => {
 
     return(

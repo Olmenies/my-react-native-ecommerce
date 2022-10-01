@@ -3,7 +3,7 @@ import React from 'react';
 //React Navigation components
 import {NavigationContainer} from "@react-navigation/native";
 //Custom React Navigation components
-import ShopNavigator from './ShopNavigator';
+import TabNavigator from './TabNavigator';
 
 //
 //Component start
@@ -12,7 +12,7 @@ const AppNavigator = () => {
 
     return(
         <NavigationContainer>
-            <ShopNavigator/>
+            <TabNavigator/>
         </NavigationContainer>
     );
 }
