@@ -20,12 +20,21 @@ const ShopNavigator = () => {
                     backgroundColor: Platform.OS === 'ios' ? 'tomato' : 'cyan'
                 },
                 headerTintColor: Platform.OS === 'ios' ? 'black' : 'white'
-            }}
-            >
-            <Stack.Screen name='Categories' component={CategoriesScreen} options={{
-                title:'Caregorias',
-            }} />
-            <Stack.Screen name='ProductsList' component={ProductsListScreen}/>
+            }}>
+            <Stack.Screen
+                name='Categories'
+                component={CategoriesScreen}
+                options={{
+                    title:'Caregorias',
+                }}
+            />
+            <Stack.Screen
+                name='ProductsList'
+                component={ProductsListScreen}
+                options={({route}) => ({
+                    headerTitle: route.params.name,
+                })}
+            />
             <Stack.Screen name='ProductDetail' component={ProductDetailScreen}/>
         </Stack.Navigator>
     );

@@ -17,7 +17,12 @@ const CategoriesScreen = ({navigation}) => {
     const renderItem = ({item}) => {
         console.log(item);
         return(
-            <CategoryItem item={item} onSelected={() => navigation.navigate('ProductsList')}/>
+            <CategoryItem item={item}
+                onSelected={() => navigation.navigate('ProductsList',{
+                    categoryID:item.id,
+                    name:item.name
+                })}
+            />
         );
     }
 
