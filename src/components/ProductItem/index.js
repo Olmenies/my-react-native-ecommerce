@@ -2,8 +2,6 @@
 import React from 'react';
 //React Native components
 import {View, Text, TouchableOpacity} from 'react-native';
-//Custom components
-import {CustomButton} from '../index';
 //Styles
 import {styles} from './styles';
 

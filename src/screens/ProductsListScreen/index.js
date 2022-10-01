@@ -32,7 +32,9 @@ const ProductsListScreen = ({navigation, route}) => {
         return(
             <ProductItem
                 item={item}
-                onSelected={() => null}
+                onSelected={() => navigation.navigate('ProductDetail',{
+                    product:item,
+                })}
             />
         );
     }
