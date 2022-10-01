@@ -1,6 +1,7 @@
 //React components
 import React from 'react';
 //React Navigation components
+import {Platform} from 'react-native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 //Custom screens
 import {CategoriesScreen, ProductsListScreen, ProductDetailScreen} from '../screens/index';
@@ -12,8 +13,18 @@ const Stack = createNativeStackNavigator();
 //
 const ShopNavigator = () => {
     return(
-        <Stack.Navigator>
-            <Stack.Screen name='Categories' component={CategoriesScreen}/>
+        <Stack.Navigator
+            initialRouteName='Categories'
+            screenOptions={{
+                headerStyle:{
+                    backgroundColor: Platform.OS === 'ios' ? 'tomato' : 'cyan'
+                },
+                headerTintColor: Platform.OS === 'ios' ? 'black' : 'white'
+            }}
+            >
+            <Stack.Screen name='Categories' component={CategoriesScreen} options={{
+                title:'Caregorias',
+            }} />
             <Stack.Screen name='ProductsList' component={ProductsListScreen}/>
             <Stack.Screen name='ProductDetail' component={ProductDetailScreen}/>
         </Stack.Navigator>
