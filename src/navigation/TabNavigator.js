@@ -6,6 +6,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 //Navigators
 import CartNavigator from './CartNavigator';
 import ShopNavigator from './ShopNavigator';
+import HistoryOrderNavigator from './HistoryOrderNavigator';
 //Icons
 import { Ionicons } from '@expo/vector-icons';
 
@@ -38,6 +39,18 @@ const TabNavigator = () => {
                 component={CartNavigator}
                 options={{
                     title:'Cart',
+                    tabBarIcon:({focused}) => (
+                        <View>
+                            <Ionicons name={focused ? 'cart' : 'cart-outline'} size={24} color="black" />
+                        </View>
+                    )
+                }}
+            />
+            <BottomTab.Screen
+                name='OrdersTab'
+                component={HistoryOrderNavigator}
+                options={{
+                    title:'Orders',
                     tabBarIcon:({focused}) => (
                         <View>
                             <Ionicons name={focused ? 'cart' : 'cart-outline'} size={24} color="black" />

@@ -3,7 +3,7 @@ import React from 'react';
 //React Native coponents
 import {View, FlatList} from 'react-native';
 //Custom components
-import {CategoryItem} from '../../components/index';
+import {HistoryOrderItem} from '../../components/index';
 //Styles
 import {styles} from './styles';
 //Mock data
